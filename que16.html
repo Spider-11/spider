@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+void nextsmaller(int arr[], int n)
+{
+	int next, i, j;
+	for (i=0; i&lt;n; i++)
+	{
+		next = -1;
+		for (j = i+1; j&lt;n; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				next = arr[j];
+				break;
+			}
+		}
+		printf("Next smaller element is %d\n",next);
+	}
+}
+
+int main()
+{
+	int arr[5],i;
+	printf("Enter the arrays\n");
+	for(i=0;i&lt;5;i++)
+	{
+	printf("Enter the array at location %d\t",i+1);
+	scanf("%d",&arr[i]);
+	}
+	nextsmaller(arr, 5);
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   7
+    Enter the array at location 2   5
+    Enter the array at location 3   3
+    Enter the array at location 4   2
+    Enter the array at location 5   8
+    Next smaller element is 5
+    Next smaller element is 3
+    Next smaller element is 2
+    Next smaller element is -1
+    Next smaller element is -1
+    
+</pre>
+    </div>
+</body>
+</html>

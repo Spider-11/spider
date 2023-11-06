@@ -1,0 +1,21 @@
+ol
+{
+    list-style: decimal;
+    background-color: navy;
+    color: chartreuse;
+}
+ol li
+{
+    margin-top: 10px;
+    font-size: 20pt;
+}
+ol li a{
+    color: chartreuse;
+    font-size: 20pt;
+    text-decoration: none;
+   
+}
+ol li a:hover{
+    color: rgb(0, 255, 21);
+  font-weight: bolder;
+}

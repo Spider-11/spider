@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    #include&lt;stdlib.h&gt;
+    struct stack
+    {
+    int data;
+    struct stack *next;
+    };
+    struct stack *top=NULL,*temp,*newnode;
+    int push(int count)
+    {
+    if(top==NULL)
+    {
+    newnode=(struct stack*) malloc(sizeof(struct stack));
+    printf("Enter the data\n");
+    scanf("%d",&(newnode->data));
+    newnode->next=NULL;
+    top=newnode;
+    count++;
+    }
+    else
+    {
+    newnode=(struct stack*) malloc(sizeof(struct stack));
+    printf("Enter the data\n");
+    scanf("%d",&(newnode->data));
+    newnode->next=top;
+    top=newnode;
+    count++;
+    }
+    return count;
+    }
+    int pop(int count)
+    {
+    if(top==NULL)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    temp=top;
+    printf("data from the top of the stack is %d\n",temp->data);
+    top=top->next;
+    free(temp);
+    count--;
+    }
+    return count;
+    }
+    void peek()
+    {
+    if(top==NULL)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    printf("Data from the top of the stack is %d\n",top->data);
+    }
+    }
+    void isempty()
+    {
+    if(top==NULL)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    printf("Stack is not empty\n");
+    }
+    }
+    void isfull(int count)
+    {
+    if(count==count+1)
+    {
+    printf("Stack is full\n");
+    }
+    else
+    {
+    printf("Stack is not full\n");
+    }
+    }
+
+    void main()
+    {
+    int ch,count=0;
+    while(1)
+    {
+    printf("\n1. Push\n");
+    printf("2. Pop\n");
+    printf("3. Peek\n");
+    printf("4. Isempty\n");
+    printf("5. Isfull\n");
+    printf("6. Exit\n");
+    printf("Enter your choice\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    count=push(count);
+    break;
+    case 2:
+    count=pop(count);
+    break;
+    case 3:
+    peek();
+    break;
+    case 4:
+    isempty();
+    break;
+    case 5:
+    isfull(count);
+    break;
+    case 6:
+    exit(1);
+    default:
+    printf("Enter the valid number\n");
+    }
+    }
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the data
+    3
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the data
+    6
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the data
+    7
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the data
+    9
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the data
+    6
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    4
+    Stack is not empty
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    3
+    Data from the top of the stack is 6
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    data from the top of the stack is 6
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    data from the top of the stack is 9
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    data from the top of the stack is 7
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    6
+    
+</pre>
+    </div>
+</body>
+</html>

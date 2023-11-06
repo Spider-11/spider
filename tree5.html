@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+
+struct node {
+    int data;
+    struct node* left;
+    struct node* right;
+};
+
+int search(int arr[], int start, int end, int value);
+struct node* newNode(int data);
+struct node* buildtree(int inorder[], int postorder[], int inStart, int inEnd, int* postIndex);
+void printpostorder(struct node* node);
+
+int main() {
+    int i,inorder[7],postorder[7];
+    printf("Enter the inorder traversal\n");
+    for(i=0;i&lt;7;i++)
+    {
+    	scanf("%d",&inorder[i]);
+	}
+	printf("Enter the postorder traversal\n");
+	for(i=0;i&Lt;7;i++)
+	{
+		scanf("%d",&postorder[i]);
+	}
+    int postindex=6;
+    struct node* root = buildtree(inorder, postorder, 0, 6, &postindex);
+    
+    printf("Postorder traversal of the constructed tree is:\n");
+    printpostorder(root);
+}
+
+int search(int arr[], int start, int end, int value) {
+    int i;
+    for (i = start; i <= end; i++) {
+        if (arr[i] == value)
+            return i;
+    }
+    return -1;
+}
+
+struct node* newNode(int data) {
+    struct node* node = (struct node*)malloc(sizeof(struct node));
+    node->data = data;
+    node->left = NULL;
+    node->right = NULL;
+    return node;
+}
+
+struct node* buildtree(int inorder[], int postorder[], int inStart, int inEnd, int* postIndex) {
+    if (inStart > inEnd)
+        return NULL;
+
+    struct node* tnode = newNode(postorder[(*postIndex)--]);
+
+    if (inStart == inEnd)
+        return tnode;
+
+    int inIndex = search(inorder, inStart, inEnd, tnode->data);
+
+    tnode->right = buildtree(inorder, postorder, inIndex + 1, inEnd, postIndex);
+    tnode->left = buildtree(inorder, postorder, inStart, inIndex - 1, postIndex);
+
+    return tnode;
+}
+
+void printpostorder(struct node* node) {
+    if (node == NULL)
+        return;
+
+    printpostorder(node->left);
+    printpostorder(node->right);
+    printf("%d ", node->data);
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the inorder traversal
+    4
+    2
+    5
+    1
+    6
+    3
+    7
+    Enter the postorder traversal
+    4
+    5
+    2
+    6
+    7
+    3
+    1
+    Postorder traversal of the constructed tree is:
+    4 5 2 6 7 3 1
+</pre>
+    </div>
+</body>
+</html>

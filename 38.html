@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    int strtoint(char str[]);
+    int main()
+    {
+    int value;
+    char str[10];
+    printf("Enter the string\n");
+    gets(str);
+    value=strtoint(str);
+    if(value!=-1)
+    {
+    printf("Equal integer value: %d",value);
+    }
+    }
+    int strtoint(char str[])
+    {
+    int i=0,sum=0;
+    while(str[i])
+    {
+    if(str[i]<'0' || str[i]>'9')
+    {
+    printf("Unable to convert");
+    return -1;
+    }
+    else
+    {
+    sum=sum*10+(str[i]-'0');
+    i++;
+    }
+    }
+    return sum;
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string
+    1234
+    
+    Equal integer value: 1234
+</pre>
+    </div>
+</body>
+</html>

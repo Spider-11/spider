@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    #include&lt;stdlib.h&gt;
+    struct que
+    {
+    char str[10];
+    struct que *next;
+    };
+    struct que *rear=NULL,*front=NULL,*newnode,*temp;
+    int insert(int count)
+    {
+    if(rear==NULL)
+    {
+    newnode=(struct que*) malloc(sizeof(struct que));
+    printf("Enter the string\n");
+    scanf("%s",&(newnode->str));
+    newnode->next=NULL;
+    rear=front=newnode;
+    count++;
+    }
+    else
+    {
+    newnode=(struct que*) malloc(sizeof(struct que));
+    printf("Enter the string\n");
+    scanf("%s",&(newnode->str));
+    newnode->next=NULL;
+    while(rear->next!=NULL)
+    {
+    rear=rear->next;
+    }
+    rear->next=newnode;
+    count++;
+    }
+    return count;
+    }
+    int del(int count)
+    {
+    if(front==NULL)
+    {
+    printf("Queue is empty\n");
+    }
+    else
+    {
+    temp=front;
+    printf("Deleted string in queue is %s",temp->str);
+    front=front->next;
+    free(temp);
+    count--;
+    }
+    return count;
+    }
+    void peek()
+    {
+    if(rear==NULL)
+    {
+    printf("Queue is empty\n");
+    }
+    else
+    {
+    rear=rear->next;
+    printf("Top string in queue is %s",rear->str);
+    }
+    }
+    void isempty()
+    {
+    if(rear==NULL)
+    {
+    printf("Queue is empty\n");
+    }
+    else
+    {
+    printf("Queue is not empty\n");
+    }
+    }
+    void isfull()
+    {
+    if(front==rear)
+    {
+    printf("Queue is full\n");
+    }
+    else
+    {
+    printf("Queue is not full\n");
+    }
+    }
+    int main()
+    {
+    int ch,count=0;
+    while(1)
+    {
+    printf("\n1. Insert\n");
+    printf("2. Delete\n");
+    printf("3. Peek\n");
+    printf("4. Isempty\n");
+    printf("5. Isfull\n");
+    printf("6. Total nodes\n");
+    printf("7. Exit\n");
+    printf("Enter your choice\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    count=insert(count);
+    break;
+    case 2:
+    count=del(count);
+    break;
+    case 3:
+    peek();
+    break;
+    case 4:
+    isempty();
+    break;
+    case 5:
+    isfull();
+    break;
+    case 6:
+    printf("Total nodes in queue is %d",count);
+    break;
+    case 7:
+    exit(1);
+    default:
+    printf("Enter the valid number\n");
+    }
+    }
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    1
+    Enter the string
+    welcome
+    
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    1
+    Enter the string
+    to
+    
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    1
+    Enter the string
+    chandigarh
+    
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    6
+    Total nodes in queue is 3
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    4
+    Queue is not empty
+    
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    2
+    Deleted string in queue is welcome
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    2
+    Deleted string in queue is to
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    2
+    Deleted string in queue is chandigarh
+    1. Insert
+    2. Delete
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Total nodes
+    7. Exit
+    Enter your choice
+    7
+    
+</pre>
+    </div>
+</body>
+</html>

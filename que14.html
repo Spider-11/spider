@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int longeststring(char* str) {
+    int n = strlen(str);
+    int stack[10], top = -1;
+    int result = 0;
+    stack[++top] = -1;
+    for (int i = 0; i < n; i++) {
+        if (str[i] == '(') {
+            stack[++top] = i;
+        } else {
+            if (top != -1) {
+                top--;
+       if (top != -1) {
+	  int current_length = i - stack[top];
+        result = (current_length > result) ? current_length : result
+            } else {
+                stack[++top] = i;
+                }
+            } else {
+         stack[++top] = i;
+            }
+        }
+    }
+    return result;
+}
+
+int main() {
+    char str[10];
+    printf("Enter a string containing parentheses: ");
+    scanf("%s", str);
+
+    int result = longeststring(str);
+    printf("Length of the longest valid string: %d\n", result);
+
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter a string containing parentheses: (((()))())())
+    Length of the longest valid string: 12
+    
+</pre>
+    </div>
+</body>
+</html>

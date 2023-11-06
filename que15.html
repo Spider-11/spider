@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+ 
+#include&lt;stdio.h&gt;
+void nextgreater(int arr[], int n) 
+{ 
+	int next, i, j; 
+	for (i=0; i&lt;n; i++) 
+	{ 
+		next = -1; 
+		for (j = i+1; j&lt;n; j++) 
+		{ 
+			if (arr[i] < arr[j]) 
+			{ 
+				next = arr[j]; 
+				break; 
+			} 
+		} 
+		printf("Next greater element is %d\n", next); 
+	} 
+} 
+
+int main() 
+{ 
+	int arr[5],i;
+	printf("Enter the arrays");
+	for(i=0;i&lt;5;i++)
+	{
+	printf("Enter the array at location %d\t",i+1);
+	scanf("%d",&arr[i]);
+	 } 
+	nextgreater(arr, 5);  
+} 
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arraysEnter the array at location 1   2
+    Enter the array at location 2   4
+    Enter the array at location 3   8
+    Enter the array at location 4   5
+    Enter the array at location 5   3
+    Next greater element is 4
+    Next greater element is 8
+    Next greater element is -1
+    Next greater element is -1
+    Next greater element is -1
+    
+</pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    int main()
+    {
+    char str[10],i,j,temp;
+    int len=0;
+    printf("Enter the string\n");
+    gets(str);
+    for(i=0;str[i];i++)
+    {
+    len++;
+    }
+    for(i=0;i<len;i++)
+    {
+    for(j=i+1;j<len;j++)
+    {
+    if(str[i]>str[j])
+    {
+    temp=str[i];
+    str[i]=str[j];
+    str[j]=temp;
+    }
+    }
+    }
+    printf("Sorted String is %s",str);
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string
+    welcome
+    
+    Sorted String is ceelmow
+</pre>
+    </div>
+</body>
+</html>

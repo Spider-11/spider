@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="div4">
+    <p>
+<pre>
+        #include&lt;stdio.h&gt;
+        #include&lt;conio.h&gt;
+        void square_of_array(int ar2[], int size)
+        {
+        int i;
+        for(i=0;i&lt;size;i++)
+        {
+        printf("\nSquare of array  %d  at location %d ", ar2[i]*ar2[i],i+1);
+        }
+        }
+        void main()
+        {
+        int ar[10],i;
+        clrscr();
+        printf("Enter the arrays\n");
+        for(i=0;i&lt;10;i++)
+        {
+        printf("\nEnter the array at location %d ",i+1);
+        scanf("%d",&ar[i]);
+        }
+        square_of_array(ar,10);
+        }
+        
+</pre>
+    </p>
+</div>
+<div id="div5">
+    <p>
+<pre>
+    Enter the arrays
+    Enter the array at location 1 1
+    Enter the array at location 2 2
+    Enter the array at location 3 3
+    Enter the array at location 4 4
+    Enter the array at location 5 5
+    Enter the array at location 6 6
+    Enter the array at location 7 7
+    Enter the array at location 8 8
+    Enter the array at location 9 9
+    Enter the array at location 10 10
+    
+    Square of array  1  at location 1
+    Square of array  4  at location 2
+    Square of array  9  at location 3
+    Square of array  16  at location 4
+    Square of array  25  at location 5
+    Square of array  36  at location 6
+    Square of array  49  at location 7
+    Square of array  64  at location 8
+    Square of array  81  at location 9
+    Square of array  100  at location 10
+</pre>
+    </p>
+</div>
+</body>
+</html>

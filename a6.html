@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    void main()
+    {
+    int ar[3][3],ar2[3][3],i,j,scaler;
+    clrscr();
+    printf("Enter the array\n");
+    for(i=0;i&lt;3;i++)
+    {
+    for(j=0;j&lt;3;j++)
+    {
+    printf("Enter the array at index %d %d\t",i,j);
+    scanf("%d",&ar[i][j]);
+    }
+    }
+    printf("Enter a scaler multiplication number\t");
+    scanf("%d",&scaler);
+    for(i=0;i&lt;3;i++)
+    {
+    for(j=0;j&lt;3;j++)
+    {
+    ar2[i][j]=ar[i][j]*scaler;
+    }
+    }
+    printf("\nScaler Multiplication of a matrix \n");
+    for(i=0;i&lt;3;i++)
+    {
+    for(j=0;j&lt;3;j++)
+    {
+    printf("%d\t",ar2[i][j]);
+    }
+    printf("\n");
+    }
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the array
+    Enter the array at index 0 0    1
+    Enter the array at index 0 1    2
+    Enter the array at index 0 2    3
+    Enter the array at index 1 0    4
+    Enter the array at index 1 1    5
+    Enter the array at index 1 2    6
+    Enter the array at index 2 0    7
+    Enter the array at index 2 1    8
+    Enter the array at index 2 2    9
+    Enter a scaler multiplication number    4
+    
+    Scaler Multiplication of a matrix
+    4       8       12
+    16      20      24
+    28      32      36
+    
+</pre>
+    </div>
+</body>
+</html>

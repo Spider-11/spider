@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+int sum(int n) {
+
+    if (n < 10) {
+        return n;
+    } else {
+    
+        return n % 10 + sum(n / 10);
+    }
+}
+int main() {
+    int num,sum2;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    if (num < 0) {
+        printf("Enter a positive integer.\n");
+    } else {
+        sum2 = sum(num);
+        printf("Sum of digits of %d = %d\n", num, sum2);
+    }
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter a positive integer: 646
+    Sum of digits of 646 = 16
+    
+</pre>
+    </div>
+
+</body>
+</html>

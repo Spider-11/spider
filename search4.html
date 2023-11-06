@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include &lt;stdio.h&gt;
+int linearsearch(char str[], char item) {
+    int index = 0;
+    while (str[index] != '\0') {
+        if (str[index] == item) {
+            return index+1; 
+        }
+        index++;
+    }
+    return -1;  
+}
+
+int main() {
+char str[50],item,result;
+    printf("Enter a string: ");
+       scanf("%s", str);
+    printf("Enter a character to search: ");
+    scanf(" %c", &item);
+    result = linearsearch(str, item);
+    if (result != -1) {
+        printf("Character %c found at index %d", item, result);
+    } else {
+        printf("Character  not found in the string");
+    }
+
+}
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter a string: welcome
+    Enter a character to search: o
+    Character o found at index 5
+</pre>
+    </div>
+</body>
+</html>

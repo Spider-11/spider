@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+void swap(int arr[], int a, int b) {
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
+int partition(int arr[], int low, int high) {
+    int pivot = arr[low];
+    int left = low + 1;
+    int right = high;
+
+    while (1) {
+	while (left <= right && arr[left] <= pivot)
+	    left++;
+
+	while (arr[right] >= pivot && right >= left)
+	    right--;
+
+	if (right < left)
+	    break;
+
+	swap(arr, left, right);
+    }
+
+    swap(arr, low, right);
+    return right;
+}
+
+void quicksort(int arr[], int low, int high) {
+    int stack[10];
+    int top = -1,pivot;
+
+    stack[++top] = low;
+    stack[++top] = high;
+
+    while (top >= 0) {
+	high = stack[top--];
+	low = stack[top--];
+
+	pivot = partition(arr, low, high);
+
+	if (pivot - 1 > low) {
+	    stack[++top] = low;
+	    stack[++top] = pivot - 1;
+	}
+
+	if (pivot + 1 < high) {
+	    stack[++top] = pivot + 1;
+	    stack[++top] = high;
+	}
+    }
+}
+
+int main() {
+    int arr[10],i;
+    printf("Enter the arrays\n");
+    for(i=0;i&lt;10;i++)
+    {
+    printf("Enter the array at location %d\t",i+1);
+    scanf("%d",&arr[i]);
+    }
+    quicksort(arr, 0,9);
+    printf("Sorted array\n ");
+    for (i = 0; i < 10; i++) {
+	printf("%d\n", arr[i]);
+    }
+    }
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   2
+    Enter the array at location 2   8
+    Enter the array at location 3   5
+    Enter the array at location 4   2
+    Enter the array at location 5   4
+    Enter the array at location 6   1
+    Enter the array at location 7   9
+    Enter the array at location 8   56
+    Enter the array at location 9   3
+    Enter the array at location 10  5
+    Sorted array
+     1
+    2
+    2
+    3
+    4
+    5
+    5
+    8
+    9
+    56
+    
+</pre>
+    </div>
+</body>
+</html>

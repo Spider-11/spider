@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    width: 200px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 1000px; /* Adjust the width as needed */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 10%; /* Adjust the top position as needed */
+    left: 100%; /* Position the dropdown to the right of the button */
+    opacity: 0;
+    transform: translateX(20px); /* Adjust the horizontal spacing as needed */
+    transition: opacity 0.3s, transform 0.3s;
+    margin-left: 2px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+iframe {
+    border: none;
+    width: calc(100% - 200px);
+    height: 100%;
+    display: block;
+    margin: 2px ;
+}
+
+#iframe body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dd1414;
+    color: #333;
+    margin: 2px;
+}
+
+#iframe h2 {
+    color: #0b130b;
+}
+
+#iframe p {
+    margin-bottom: 2px;
+}
+
+
+    </style>
+    </head>
+    
+
+<body>
+    <header id="dropdownHeader">
+        <h1>DSA PROGRAMS</h1>
+    </header>
+    
+    <main>
+        <nav>
+                <div class="dropdown">
+    <button class="dropbtn">Array</button>
+    <div class="dropdown-content">
+        <a href="1.html" target="iframe">Enter an array from the user and display all the values</a>
+        <a href="2.html" target="iframe">Enter an array from the user and print the array in reverse order</a>
+        <a href="3.html" target="iframe">Enter an array from the user and copy the array into a second array</a>
+        <a href="4.html" target="iframe">Enter an array from the user and copy it into another array in reverse order</a>
+        <a href="5.html" target="iframe">Enter an array from the user and print the numbers which are even</a>
+        <a href="6.html" target="iframe">Enter an array from the user and print the numbers which are positive</a>
+        <a href="7.html" target="iframe">Enter an array from the user and square all the values of the array</a>
+        <a href="8.html" target="iframe">Enter an array from the user and find the maximum and minimum values</a>
+        <a href="9.html" target="iframe">Enter an array from the user and find the k-th smallest value</a>
+        <a href="10.html" target="iframe">Enter an array from the user and add all values</a>
+        <a href="11.html" target="iframe">Enter an array from the user and find the duplicate values</a>
+        <a href="12.html" target="iframe">Enter an array from the user and remove the duplicate values and fill with zero</a>
+        <a href="13.html" target="iframe">Enter an array from the user and count the duplicate values</a>
+        <a href="14.html" target="iframe">Enter an array from the user and print all possible combinations of the elements</a>
+        <a href="15.html" target="iframe">Enter an array from the user and print all the palindrome numbers</a>
+        <a href="16.html" target="iframe">Enter two arrays from the user and check if they are the same or not</a>
+        <a href="17.html" target="iframe">Merge the two sorted arrays into one array but in sorted order</a>
+        <a href="18.html" target="iframe">Find the local minima in the array</a>
+        <a href="19.html" target="iframe">Find the local maxima in the array</a>
+    </div>
+</div>
+
+       <div class="dropdown">
+    <button class="dropbtn">2D Array</button>
+    <div class="dropdown-content">
+        <a href="a1.html" target="iframe">ENTER A MATRIX OF 4 ROWS AND 2 COLUMNS FROM THE USER DISPLAY IT IN MATRIX FORMAT</a>
+        <a href="a2.html" target="iframe">ENTER TWO MATRICES  FROM USER, ADD THE MATRICES AND DISPLAY THE ANSWER</a>
+        <a href="a3.html" target="iframe">ENTER TWO MATRICES FROM USER, SUBTRACT THE MATRICES AND DISPLAY THE ANSWER</a>
+        <a href="a4.html" target="iframe">ENTER TWO MATRICES FROM USER, MULTIPLY THE MATRICES AND DISPLAY THE ANSWER</a>
+        <a href="a5.html" target="iframe">ENTER A MATRIX FROM USER, AND TRANSPOSE IT</a>
+        <a href="a6.html" target="iframe">ENTER THE MATRIX FROM USER, MULTIPLY IT WITH A SCALAR VALUE AND DISPLAY THE ANSWER</a>
+       
+    </div>
+</div>
+
+
+       <div class="dropdown">
+    <button class="dropbtn">String</button>
+    <div class="dropdown-content">
+        <a href="21.html" target="iframe">Enter the string from the user and convert it into uppercase</a>
+        <a href="22.html" target="iframe">Enter the string from the user and convert it into lowercase</a>
+        <a href="23.html" target="iframe">Enter the string from the user and convert it into sentence case</a>
+        <a href="24.html" target="iframe">Enter the string from the user and convert it into title case</a>
+        <a href="25.html" target="iframe">Enter the string from the user and convert it into toggle case</a>
+        <a href="26.html" target="iframe">Enter the string from the user and find the length of the string</a>
+        <a href="27.html" target="iframe">Enter two strings from the user and compare if they are equal or not</a>
+        <a href="28.html" target="iframe">Enter two strings from the user and concatenate them into another string</a>
+        <a href="29.html" target="iframe">Enter the string from the user and copy it into another string variable</a>
+        <a href="30.html" target="iframe">Enter the string from the user, enter the index number, and print the character present at that index</a>
+        <a href="31.html" target="iframe">Enter the string from the user and check if it is a palindrome or not</a>
+        <a href="32.html" target="iframe">Enter the string from the user and print each character on a new line</a>
+        <a href="33.html" target="iframe">Enter the string from the user and copy the reverse of the string into another string</a>
+        <a href="34.html" target="iframe">Enter the string from the user and print the difference of ASCII values of each character</a>
+        <a href="35.html" target="iframe">Enter the string from the user, also enter a character and search for the character in the string</a>
+        <a href="36.html" target="iframe">Enter the string from the user, also enter a character and print the index of the character if it exists in the string, else print -1</a>
+        <a href="37.html" target="iframe">Enter the string from the user and count the number of vowels</a>
+        <a href="38.htmlstring18.html" target="iframe">Enter the string from the user and convert it into an integer value</a>
+        <a href="40.html" target="iframe">Enter the string from the user and count the number of characters, words, spaces, and lines</a>
+        <a href="41.html" target="iframe">Print all the permutations of a string (e.g., "ABCDE")</a>
+        <a href="42.html" target="iframe">Enter the string from the user, sort the string in ascending order, and print it</a>
+        <a href="43.html" target="iframe">Enter a sentence from the user, then enter a word and count the occurrence of that word in the sentence</a>
+        <a href="44.html" target="iframe">Enter a sentence from the user, then enter a word and replace that word with another word</a>
+        <a href="47.html" target="iframe">Display the string on the output screen but ask the text alignment option given by the user (1 for left, 2 for center, 3 right)</a>
+        <a href="49.html" target="iframe">Enter the string from the user and convert characters into their ASCII values in the integer array</a>
+    </div>
+</div>
+
+
+       <div class="dropdown">
+    <button class="dropbtn">Trees</button>
+    <div class="dropdown-content">
+       
+        <a href="tree1.html" target="iframe">Construct Binary Tree from Preorder and Inorder Traversal</a>
+        <a href="tree2.html" target="iframe">Binary Tree Level Order Traversal</a>
+        <a href="tree3.html" target="iframe">Print Left View of Binary Tree</a>
+        <a href="tree4.html" target="iframe">Display the Right View of Binary Tree</a>
+        <a href="tree5.html" target="iframe">Construct Binary Tree from Postorder and Inorder Traversal</a>
+        <a href="tree6.html" target="iframe">Find the Maximum Depth of Binary Tree</a>
+        <a href="tree7.html" target="iframe">Create Binary Search Tree Using Arrays (Insert, Delete, Search, Preorder, Inorder, Postorder, Minimum Element)</a>
+        <a href="tree8.html" target="iframe">Create Binary Search Tree Dynamically (Insert, Delete, Search, Preorder, Inorder, Postorder, Minimum Element)</a>
+        <a href="tree9.html" target="iframe">Find Inorder Predecessor and Inorder Successor of Binary Search Tree (Dynamically Represented)</a>
+        <a href="tree10.html" target="iframe">Check Whether Binary Search Tree Contains a Dead End</a>
+        <!-- <a href="tree11._convert_to_bst_array.html" target="iframe">Create Binary Tree to Binary Search Tree Through Array</a> -->
+        <a href="tree12.html" target="iframe">Find Kth Largest Element in Binary Search Tree Through Array</a>
+        <a href="tree13.html" target="iframe">Find Kth Smallest Element in a Binary Search Tree Through Array</a>
+        <a href="tree14.html" target="iframe">Print Preorder Traversal to Postorder Traversal of Binary Search Tree</a>
+        <a href="tree15.html" target="iframe">Construct Binary Search Tree from Given Preorder Traversal Through Arrays</a>
+        <a href="tree16.html" target="iframe">Construct Binary Search Tree from Given Postorder Traversal Through Arrays</a>
+        <a href="tree17.html" target="iframe">Create Strictly Binary Tree from the Given Input by the User (Dynamically)</a>
+        <a href="tree18.html" target="iframe">Create almost complete binary tree from the given input by the user (Dynamically)</a>
+        <a href="tree19.html" target="iframe">Create complete binary tree from the given input by the user (Dynamically)</a>
+        <a href="tree20.html" target="iframe">Count the number of nodes in binary search tree constructed dynamically</a>
+    </div>
+</div>
+
+
+       <div class="dropdown">
+    <button class="dropbtn">Graphs</button>
+    <div class="dropdown-content">
+        
+        <a href="graph1.html" target="iframe">Enter the Vertices and Edges and Represent in Adjacency Matrix and Print It</a>
+        <a href="graph2.html" target="iframe">Create the Graph as an Adjacency List with Operations Such as Insertion, Deletion</a>
+        <a href="graph5.html" target="iframe">Traverse the Adjacency Matrix with Depth First Search</a>
+        <a href="graph6.html" target="iframe">Traverse the Adjacency List with Depth First Search</a>
+        <a href="graph3.html" target="iframe">Traverse the Adjacency Matrix with Breadth First Search</a>
+        <a href="graph4.html" target="iframe">Traverse the Adjacency List with Breadth First Search</a>
+    </div>
+</div>
+
+
+       <div class="dropdown">
+    <button class="dropbtn">Queue</button>
+    <div class="dropdown-content">
+     
+        <a href="que1.html" target="iframe">Implement the Operations of Simple Queue in an Integer Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que2.html" target="iframe">Implement the Operations of Simple Queue in a String Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que3.html" target="iframe">Implement the Operations of Queue of Dynamically Integers (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que4.html" target="iframe">Implement the Operations of Queue of Dynamically Strings (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que5.html" target="iframe">Implement the Operations of Circular Queue in an Integer Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que6.html" target="iframe">Implement the Operations of Circular Queue in a String Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que7.html" target="iframe">Implement the Operations of Priority Queue in an Integer Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que8.html" target="iframe">Implement the Operations of Priority Queue in a String Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que9.html" target="iframe">Implement the Operations of Double-Ended Queue in an Integer Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que10.html" target="iframe">Implement the Operations of Double-Ended Queue in a String Array (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que11.html" target="iframe">Implement the Operations of Priority Queue Dynamically of Integers (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que12.html" target="iframe">Implement the Operations of Priority Queue Dynamically of Strings (Insert, Delete, Peek, IsEmpty, IsFull)</a>
+        <a href="que14.html" target="iframe">Length of the longest valid Substring</a>
+        <a href="que15.html" target="iframe">Find Next Greater element</a>
+        <a href="que16.html" target="iframe">Find Next Smaller element</a>
+        <a href="que18.html" target="iframe">Reverse First K elements of Queue</a>
+    </div>
+</div>
+
+
+        <div class="dropdown">
+    <button class="dropbtn">Linked List</button>
+    <div class="dropdown-content">
+     
+        <a href="ll1.html" target="iframe">Implement the Operations of Single Linked List Storing Integer Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll2.html" target="iframe">Implement the Operations of Single Circular Linked List Storing Integer Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll3.html" target="iframe">Implement the Operations of Doubly Linked List Storing Integer Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll4.html" target="iframe">Implement the Operations of Doubly Circular Linked List Storing Integer Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll5.html" target="iframe">Implement the Operations of Single Linked List Storing String Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll6.html" target="iframe">Implement the Operations of Single Circular Linked List Storing String Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll7.html" target="iframe">Implement the Operations of Doubly Linked List Storing String Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll8.html" target="iframe">Implement the Operations of Doubly Circular Linked List Storing String Values (Insert at Begin, Insert at Pos, Insert at End, Delete at Begin, Delete at End, Delete at Pos, IsEmpty, IsFull, Display, Search)</a>
+
+        <a href="ll9.html" target="iframe">Implement the Polynomial Manipulation Addition Operation</a>
+
+        <a href="ll10.html" target="iframe">Implement the Polynomial Manipulation Subtraction Operation</a>
+
+        <a href="ll11.html" target="iframe">Implement the Polynomial Manipulation Multiplication Operation</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Stack</button>
+    <div class="dropdown-content">
+        <a href="stack1.html" target="iframe">Create a Stack Implementing the Operations on an Integer Array (Push, Pop, Peek, IsEmpty, IsFull)</a>
+        <a href="stack2.html" target="iframe">Create a Stack Implementing the Operations on the Characters Array (Push, Pop, Peek, IsEmpty, IsFull)</a>
+        <a href="stack3.html" target="iframe">Create a Stack Implementing the Operations on Integer Nodes (Dynamically) (Push, Pop, Peek, IsEmpty, IsFull)</a>
+        <a href="stack4.html" target="iframe">Create a Stack Implementing the Operations on Character Nodes (Dynamically) (Push, Pop, Peek, IsEmpty, IsFull)</a>
+        <a href="stack5.html" target="iframe">Enter the String From the User and Reverse the String Using Stacks</a>
+        <a href="stack6.html" target="iframe">Create the Program to Match the Single Bracket Using Stacks</a>
+        <a href="stack9.html" target="iframe">Enter the Infix Expression From User and Convert Into Prefix Expression</a>
+        <a href="stack10.html" target="iframe">Enter the Infix Expression From User and Convert Into Postfix Expression</a>
+        <a href="stack11.html" target="iframe">Create a Program to Evaluate the Prefix Expression</a>
+        <a href="stack12.html" target="iframe">Create a Program to Evaluate the Postfix Expression</a>
+    </div>
+</div>
+
+
+     <div class="dropdown">
+    <button class="dropbtn">Sorting</button>
+    <div class="dropdown-content">
+     
+        <a href="sort1.html" target="iframe">Enter an Integer Array From the User and Perform Selection Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort2.html" target="iframe">Enter an Integer Array From the User and Perform Selection Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort3.html" target="iframe">Enter an Integer Array From the User and Perform Bubble Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+        <a href="sort4.html" target="iframe">Enter an Integer Array From the User and Perform Bubble Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort5.html" target="iframe">Enter an Integer Array From the User and Perform Insertion Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort6.html" target="iframe">Enter an Integer Array From the User and Perform Insertion Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort7.html" target="iframe">Enter an Integer Array From the User and Perform Merge Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort8.html" target="iframe">Enter an Integer Array From the User and Perform Merge Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+       <a href="sort9.html" target="iframe">Enter an Integer Array From the User and Perform Quick Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort10.html" target="iframe">Enter an Integer Array From the User and Perform Quick Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort11.html" target="iframe">Enter a String Array From the User and Perform Selection Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort12.html" target="iframe">Enter a String Array From the User and Perform Selection Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort13.html" target="iframe">Enter a String Array From the User and Perform Bubble Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort14.html" target="iframe">Enter a String Array From the User and Perform Bubble Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort15.html" target="iframe">Enter a String Array From the User and Perform Insertion Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort16.html" target="iframe">Enter a String Array From the User and Perform Insertion Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort17.html" target="iframe">Enter a String Array From the User and Perform Merge Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort18.html" target="iframe">Enter a String Array From the User and Perform Merge Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort19.html" target="iframe">Enter a String Array From the User and Perform Quick Sort Algorithm Through Iteration. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+        <a href="sort20.html" target="iframe">Enter a String Array From the User and Perform Quick Sort Algorithm Through Recursion. Also, Calculate the Worst and Best Complexity with Exact Time.</a>
+
+    </div>
+</div>
+<a href="jjd.html" target="iframe"></a>
+
+       <div class="dropdown">
+    <button class="dropbtn">Searching</button>
+    <div class="dropdown-content">
+        <a href="search1.html" target="iframe">Enter an Integer Array From the User, Enter an Integer Value and Perform Linear Search Algorithm Through Iteration.</a>
+        <a href="search2.html" target="iframe">Enter a String From the User, Enter a Character and Perform Linear Search Algorithm Through Recursion.</a>
+        <a href="search3.html" target="iframe">Enter an Integer Array From the User, Enter an Integer Value and Perform Linear Search Algorithm Through Recursion.</a>
+        <a href="search4.html" target="iframe">Enter a String From the User, Enter a Character and Perform Linear Search Algorithm Through Iteration.</a>
+        <a href="search5.html" target="iframe">Enter an Integer Array From the User, Enter an Integer Value and Perform Binary Search Algorithm Through Iteration.</a>
+        <a href="search6.html" target="iframe">Enter a String From the User, Enter a Character and Perform Binary Search Algorithm Through Recursion.</a>
+        <a href="search7.html" target="iframe">Enter an Integer Array From the User, Enter an Integer Value and Perform Binary Search Algorithm Through Recursion.</a>
+        <a href="search8.html" target="iframe">Enter a String From the User, Enter a Character and Perform Binary Search Algorithm Through Iteration.</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Recursion</button>
+    <div class="dropdown-content">
+        <a href="recur1.html" target="iframe">Calculate Factorial of a Number Using Recursion</a>
+        <a href="recur2.html" target="iframe">Calculate Fibonacci of a Number Using Recursion</a>
+        <a href="recur3.html" target="iframe">Calculate the Sum of Natural Numbers Till 10 Using Recursion</a>
+        <a href="recur4.html" target="iframe">Convert a Number Into Binary Using Recursion</a>
+        <a href="recur5.html" target="iframe">Find the Largest Element in the Integer Array Using Recursion</a>
+        <a href="recur6.html" target="iframe">Find the Smallest Element in the Integer Array Using Recursion</a>
+        <a href="recur7.html" target="iframe">Enter the Number From the User and Add All Digits of the Number Using Recursion</a>
+    </div>
+</div>
+        </nav>
+        <iframe name="iframe" id="iframe" src="jjd.html">
+        </iframe>
+
+    </main>
+
+    <script>
+     
+    // Set the default iframe source
+    // document.getElementById('iframe').src = 'pic.html';
+
+    
+</script>
+
+       
+   
+</body>
+</html>

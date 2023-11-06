@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include &lt;stdio.h&gt;
+    int push(int item, int *top, char stack[], int size) {
+        if (*top == size - 1) {
+            printf("Stack overflow\n");
+        } else {
+            (*top)++;
+            stack[*top] = item;
+        }
+        return *top;
+    }
+
+    int pop(char stack[], int *top) {
+        if (*top == -1) {
+            printf("Stack underflow\n");
+            return -1;
+        } else {
+            return stack[(*top)--];
+        }
+    }
+
+    int checkbracket(char expression[]) {
+        int i, top = -1;
+        char stack[10];
+
+        for (i = 0; expression[i]; i++) {
+            if (expression[i] == '(') {
+                top = push('(', &top, stack, 9);
+            } else if (expression[i] == ')') {
+                if (pop(stack, &top) != '(') {
+                    return -1;
+                }
+            }
+        }
+
+        if (top == -1) {
+            return 1; 
+        } else {
+            return -1;
+        }
+    }
+
+    int main() {
+        char expression[10];
+        int ch = -1;
+        printf("Enter an expression with brackets: ");
+        scanf("%s", expression);
+        ch = checkbracket(expression);
+
+        if (ch == 1) {
+            printf("Brackets are balanced\n");
+        } else {
+            printf("Brackets are not balanced\n");
+        }
+    }
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter an expression with brackets: (())
+    Brackets are balanced
+    
+</pre>
+    </div>
+</body>
+</html>

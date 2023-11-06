@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char str[10];
+    int ar[10],j,i;
+    printf("Enter the string\n");
+    gets(str);
+    for ( i = 0;str[i]; i++) {
+    ar[i]=str[i];
+    }
+    for(j=0;j&lt;i;j++){
+    printf("Converted string into ASCII values: %d\n", ar[j]);
+    }
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string
+    welcome
+    Converted string into ASCII values: 119
+    Converted string into ASCII values: 101
+    Converted string into ASCII values: 108
+    Converted string into ASCII values: 99
+    Converted string into ASCII values: 111
+    Converted string into ASCII values: 109
+    Converted string into ASCII values: 101
+</pre>
+    </div>
+</body>
+</html>

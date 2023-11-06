@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+        <p>
+<pre>
+        #include&lt;stdio.h&gt;
+        int  palin(int num)
+        {
+        int i,org,rev=0,rem;
+        org=num;
+        while(num>0)
+        {
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+        }
+        if(org==rev)
+        return org;
+        else
+        return -1;
+        }
+        void main()
+        {
+        int ar[10],ar2[5],org,i;
+        printf("Enter the arrays\n");
+        for(i=0;i&lt;5;i++)
+        {
+        printf("Enter the array at location %d \t",i+1);
+        scanf("%d",&ar[i]);
+        }
+        for(i=0;i&lt;5;i++)
+        {
+        ar2[i]=palin(ar[i]);
+        }
+        for(i=0;i&lt;5;i++)
+        {
+        if(ar[i]==ar2[i])
+        printf("\nNumber is palindrome %d",ar2[i]);
+        else
+        printf("\nNumber is not palindrome %d",ar[i]);
+         }
+        }
+</pre>
+        </p>
+    </div>
+<div id="div5">
+<p>
+<pre>
+    Enter the arrays
+    Enter the array at location 1   121
+    Enter the array at location 2   42
+    Enter the array at location 3   535
+    Enter the array at location 4   735
+    Enter the array at location 5   246
+    
+    Number is palindrome 121
+    Number is not palindrome 42
+    Number is palindrome 535
+    Number is not palindrome 735
+    Number is not palindrome 246
+</pre>
+</p>
+</div>    
+</body>
+</html>

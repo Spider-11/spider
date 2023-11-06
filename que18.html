@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+void reversek(int ar[],int size,int k)
+{
+int i;
+for(i=k;i>=0;i--)
+{
+printf("Reverse order is %d\n",ar[i]);
+}
+for(i=k+1;i&lt;size;i++)
+{
+printf("Reverse order is %d\n",ar[i]);
+}
+}
+int main()
+{
+int ar[5],i,k;
+printf("Enter the arrays\n");
+for(i=0;i&lt;5;i++)
+{
+printf("Enter the array at location %d\t",i+1);
+scanf("%d",&ar[i]);
+}
+printf("Enter the number of array to reverse\n");
+scanf("%d",&k);
+reversek(ar,5,k);
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   2
+    Enter the array at location 2   6
+    Enter the array at location 3   9
+    Enter the array at location 4   4
+    Enter the array at location 5   7
+    Enter the number of array to reverse
+    2
+    Reverse order is 9
+    Reverse order is 6
+    Reverse order is 2
+    Reverse order is 4
+    Reverse order is 7
+    
+</pre>
+    </div>
+</body>
+</html>

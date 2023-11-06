@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="div4">
+    <p>
+<pre>
+        #include&lt;stdio.h&gt;
+        #include&lt;conio.h&gt;
+        void main()
+        {
+        int ar[10],i,big,small,loc1=0,loc2=0;
+        for(i=0;i&lt;10;i++)
+        {
+        printf("Enter the array at location %d \t",i+1);
+        scanf("%d",&ar[i]);
+        big=ar[0];
+        small=ar[0];
+        }
+        for(i=0;i&lt;10;i++)
+        {
+        if(ar[i]>big)
+        {
+        big=ar[i];
+        loc1=i;
+        }
+        if(ar[i]&lt;small)
+        {
+        small=ar[i];
+        loc2=i;
+        }
+        }
+        printf("The Biggest number in the array is %d at location %d",big,loc1+1);
+        printf("\nThe Smallest number in the array is %d at location %d",small,loc2+1);
+        }
+        
+</pre>
+    </p>
+</div>
+<div id="div5">
+    <p>
+<pre>
+    Enter the array at location 1   2
+    Enter the array at location 2   4
+    Enter the array at location 3   7
+    Enter the array at location 4   2
+    Enter the array at location 5   8
+    Enter the array at location 6   53
+    Enter the array at location 7   5
+    Enter the array at location 8   74
+    Enter the array at location 9   1
+    Enter the array at location 10  5
+    
+    The Biggest number in the array is 74 at location 8
+    The Smallest number in the array is 1 at location 9
+</pre>
+    </p>
+</div>
+</body>
+</html>

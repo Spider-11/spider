@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+int insertion(char ar[][10], int size, int index) {
+	char temp[10];
+	int j;
+    if (index >= size) {
+        return 0;
+    }
+    strcpy(temp, ar[index]);
+    j = index - 1;
+    while (j >= 0 && strcmp(ar[j], temp) > 0) {
+        strcpy(ar[j + 1], ar[j]);
+        j--;
+    }
+    strcpy(ar[j + 1], temp);
+    return insertion(ar, size, index + 1);
+}
+
+int main() {
+    char ar[5][10];
+    int i;
+    for (i = 0; i < 5; i++) {
+    	printf("Enter the string at %d location\t",i+1);
+        scanf("%s", ar[i]);
+    }
+    insertion(ar, 5, 0);
+    printf("Sorted Strings are\n");
+    for (i = 0; i < 5; i++) {
+        printf("%s\n", ar[i]);
+    }
+}
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string at 1 location  hye
+    Enter the string at 2 location  bye
+    Enter the string at 3 location  cat
+    Enter the string at 4 location  welcom
+    Enter the string at 5 location  hello
+    Sorted Strings are
+    bye
+    cat
+    hello
+    hye
+    welcom
+    
+</pre>
+    </div>
+</body>
+</html>

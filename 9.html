@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+        <p>
+<pre>
+        #include&lt;stdio.h&gt;
+        int main()
+        {
+        int ar[10],i,temp,j,lowest_value,size;
+        printf("Enter the size of array\t");
+        scanf("%d",&size);
+        printf("\nEnter the arrays\n");
+        for(i=0;i&lt;size;i++)
+        {
+        printf("\nEnter the array at location %d \t",i+1);
+        scanf("%d",&ar[i]);
+        }
+        printf("Enter the lowest value \t");
+        scanf("%d",&lowest_value);
+        for(i=0;i&lt;size;i++)
+        {
+        for(j=i+1;j&lt;size;j++)
+        {
+        if(ar[i]>ar[j])
+        {
+        temp=ar[i];
+        ar[i]=ar[j];
+        ar[j]=temp;
+        }
+        }}
+        for(i=0;i&lt;size;i++)
+        {
+        for(j=i+1;j&lt;size;j++)
+        {
+        if(ar[i]==ar[j])
+        {
+        for(i=ar[i]-1;i&lt;size-1;i++)
+        {
+        ar[i]=ar[i+1];
+        }
+        size--;
+        }}}
+        for(i=0;i&lt;10;i++)
+        {
+        if(lowest_value+1==i)
+        printf("The lowest value %d",ar[i]);
+        }
+        }
+</pre>
+        </p>
+    </div>
+<div id="div5">
+    <p>
+<pre>
+    Enter the size of array 6
+
+    Enter the arrays
+    
+    Enter the array at location 1   2
+    
+    Enter the array at location 2   2
+    
+    Enter the array at location 3   4
+    
+    Enter the array at location 4   67
+    
+    Enter the array at location 5   3
+    
+    Enter the array at location 6   78
+    Enter the lowest value  2
+    The lowest value 67
+</pre>
+    </p>
+</div>    
+</body>
+</html>

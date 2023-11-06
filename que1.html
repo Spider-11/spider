@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    int rear=-1;
+    int insert(int que[],int size,int front)
+    {
+    int item;
+    if(rear==size)
+    {
+    printf("Queue is full\n");
+    }
+    else if(rear==-1 && front==-1)
+    {
+    front=rear=0;
+    printf("Enter the item\n");
+    scanf("%d",&item);
+    que[rear]=item;
+    }
+    else
+    {
+    rear++;
+    printf("Enter the item\n");
+    scanf("%d",&item);
+    que[rear]=item;
+    }
+    return front;
+    }
+    int del(int que[],int front)
+    {
+    int temp;
+    if(front==-1)
+    {
+    printf("Queue is empty\n");
+    }
+    else if(front==rear)
+    {
+    temp=que[front];
+    printf("Delete item is %d\n",temp);
+    front=rear=-1;
+    }
+    else
+    {
+    temp=que[front];
+    printf("Delete item is %d\n",temp);
+    front++;
+    }
+    return front;
+    }
+    void peek(int que[])
+    {
+    int item;
+    if(rear==-1)
+    {
+    printf("Queue is empty\n");
+    }
+    else
+    {
+    item=que[rear];
+    printf("Top element in the queue is %d\n",item);
+    }
+    }
+    void isempty(int front)
+    {
+    if(front==-1 || front>rear)
+    {
+    printf("Queue is empty\n");
+    }
+    else
+    {
+    printf("Queue is not empty\n");
+    }
+    }
+    void isfull(int size)
+    {
+    if(rear==size)
+    {
+    printf("Queue is full\n");
+    }
+    else
+    {
+    printf("Queue is not full\n");
+    }
+    }
+    void main()
+    {
+    int front=-1,ch,que[10];
+    while(1)
+    {
+    printf("1. Insert\n");
+    printf("2. Delete\n");
+    printf("3. Peek\n");
+    printf("4. isempty\n");
+    printf("5. Isfull\n");
+    printf("6. Exit\n");
+    printf("Enter your choice\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    front=insert(que,9,front);
+    break;
+    case 2:
+    front=del(que,front);
+    break;
+    case 3:
+    peek(que);
+    break;
+    case 4:
+    isempty(front);
+    break;
+    case 5:
+    isfull(9);
+    break;
+    case 6:
+    exit(1);
+    default:
+    printf("Enter the valid number\n");
+    }
+    }
+    }
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the item
+    2
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the item
+    4
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the item
+    6
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the item
+    7
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    1
+    Enter the item
+    8
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    4
+    Queue is not empty
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    Delete item is 2
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    3
+    Top element in the queue is 8
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    Delete item is 4
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    Delete item is 6
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    2
+    Delete item is 7
+    1. Insert
+    2. Delete
+    3. Peek
+    4. isempty
+    5. Isfull
+    6. Exit
+    Enter your choice
+    6
+</pre>
+    </div>
+</body>
+</html>

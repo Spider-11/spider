@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    int main()
+    {
+    char str[10],ch,f,i;
+    printf("Enter the string\n");
+    gets(str);
+    printf("Enter the search Character\t");
+    scanf("%c",&ch);
+    for(i=0;str[i];i++)
+    {
+    if(str[i]==ch)
+    {
+    f=1;
+    break;
+    }
+    }
+    if(f==1)
+    {
+    printf("%c character in string at location %d\n",ch,i+1);
+    }
+    else
+    {
+    printf("Not Searched\n");
+    }
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string
+    welcome
+    Enter the search Character      c
+    
+    c character in string at location 4
+</pre>
+    </div>
+</body>
+</html>

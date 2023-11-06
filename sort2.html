@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+int selection(int ar[], int size, int index) {
+	int j,temp;
+    if (index == size - 1) {
+        return 0;
+    }
+    for ( j = index + 1; j < size; j++) {
+        if (ar[index] > ar[j]) {
+            temp = ar[index];
+            ar[index] = ar[j];
+            ar[j] = temp;
+        }
+    }
+    return selection(ar, size, index + 1);
+}
+int main() {
+    int ar[10], i;
+    printf("Enter the arrays\n");
+    for (i = 0; i < 10; i++) {
+    	printf("Enter the array at location %d\t",i+1);
+        scanf("%d", &ar[i]);
+    }
+    selection(ar, 10, 0);
+    printf("Sorted Arrays are\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d\n", ar[i]);
+    }
+}
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   1
+    Enter the array at location 2   5
+    Enter the array at location 3   2
+    Enter the array at location 4   6
+    Enter the array at location 5   2
+    Enter the array at location 6   7
+    Enter the array at location 7   9
+    Enter the array at location 8   7
+    Enter the array at location 9   8
+    Enter the array at location 10  14
+    Sorted Arrays are
+    1
+    2
+    2
+    5
+    6
+    7
+    7
+    8
+    9
+    14
+</pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;math.h&gt;
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
+struct Node* createnewNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    node->data = data;
+    node->left = node->right = NULL;
+    return node;
+}
+
+int main() {
+    int data;
+    struct Node* root = NULL;
+    struct Node* newNode = NULL;
+    int level = 0;
+    int nodeCount = 0;
+    int maxNodes = 0;
+
+    printf("Enter the root node value: ");
+    scanf("%d", &data);
+    root =  createnewNode(data);
+    newNode = root;
+    nodeCount++;
+
+    while (1) {
+        printf("Enter the level and node value (level data, 0 0 to stop): ");
+        scanf("%d %d", &level, &data);
+
+        if (level == 0 && data == 0) {
+            printf("Binary tree construction completed.\n");
+            break;
+        }
+
+        maxNodes = (int)pow(2, level - 1);
+
+        if (nodeCount >= maxNodes) {
+            printf("Level %d is full. Moving to the next level.\n", level);
+            continue;
+        }
+
+        int bit = 0;
+        int levelMask = (int)pow(2, level - 1);
+
+        if (nodeCount < levelMask) {
+            bit = 0;
+        } else {
+            bit = 1;
+        }
+        struct Node* parent = root;
+        int bitMask = 0;
+
+        for (int i = level - 2; i >= 0; i--) {
+            bitMask = (int)pow(2, i);
+
+            if ((nodeCount & bitMask) == 0) {
+              if (bit == 0) {
+                    if (parent->left == NULL) {
+                        break;
+                    }
+                    parent = parent->left;
+                }
+               else {
+                    if (parent->right == NULL) {
+                        break;
+                    }
+                    parent = parent->right;
+                }
+            } else {
+                parent = root;
+            }
+        }
+       newNode = createnewNode(data);
+        if (bit == 0) {
+            parent->left = newNode;
+        } else {
+            parent->right = newNode;
+        }
+
+        nodeCount++;
+    }
+    return 0;
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the root node value: 100
+    Enter the level and node value (level data, 0 0 to stop): 100
+    90
+    Level 100 is full. Moving to the next level.
+    Enter the level and node value (level data, 0 0 to stop): 70
+    80
+    Level 70 is full. Moving to the next level.
+    Enter the level and node value (level data, 0 0 to stop): 110
+    120
+    Level 110 is full. Moving to the next level.
+    Enter the level and node value (level data, 0 0 to stop): 00
+    0 0
+    Binary tree construction completed.
+    
+</pre>
+    </div>
+</body>
+</html>

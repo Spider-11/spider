@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+void selection(char str[][10],int size)
+{
+int i,j;
+char temp[10];
+for(i=0;i&lt;size;i++)
+{
+for(j=i+1;j&lt;size;j++)
+{
+if(strcmp(str[i],str[j])>0)
+{
+strcpy(temp,str[i]);
+strcpy(str[i],str[j]);
+strcpy(str[j],temp);
+}
+}
+}
+}
+int main()
+{
+int i;
+char str[5][10];
+for(i=0;i&lt;5;i++)
+{
+printf("Enter the strings at %d location\t",i+1);
+scanf("%s",str[i]);
+}
+selection(str,5);
+printf("Sorted strings are\n");
+for(i=0;i&lt;5;i++)
+{
+printf("%s\n",str[i]);
+}
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the strings at 1 location hello
+    Enter the strings at 2 location hye
+    Enter the strings at 3 location bye
+    Enter the strings at 4 location book
+    Enter the strings at 5 location temp
+    Sorted strings are
+    book
+    bye
+    hello
+    hye
+    temp
+    
+</pre>
+    </div>
+</body>
+</html>

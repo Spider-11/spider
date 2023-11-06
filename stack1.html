@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    int push(int stack[],int top,int size)
+    {
+    int item;
+    if(top==size)
+    {
+    printf("Stack is full\n");
+    }
+    else
+    {
+    printf("Enter the item you want to insert\n");
+    scanf("%d",&item);
+    top++;
+    stack[top]=item;
+    printf("%d is added in the stack\t",stack[top]);
+    }
+    return top;
+    }
+    int pop(int stack[],int top)
+    {
+    int item;
+    if(top==-1)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    item=stack[top];
+    printf("Deleted Item is %d\t",item);
+    top--;
+    }
+    return top;
+    }
+    void peek(int stack[],int top)
+    {
+    int item;
+    if(top==-1)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    item=stack[top];
+    printf("Top element in the stack is %d\t",item);
+    }
+    }
+    void isempty(int top)
+    {
+    if(top==-1)
+    {
+    printf("Stack is empty\n");
+    }
+    else
+    {
+    printf("Stack is not empty\n");
+    }
+    }
+    void isfull(int top,int size)
+    {
+    if(top==size)
+    {
+    printf("Stack is full\n");
+    }
+    else
+    {
+    printf("Stack is not full\n");
+    }
+    }
+    void main()
+    {
+    int stack[5],top=-1,ch;
+    while(1)
+    {
+    printf("\n1. Push\n");
+    printf("2. Pop\n");
+    printf("3. Peek\n");
+    printf("4. Isempty\n");
+    printf("5. Isfull\n");
+    printf("6. Exit\n");
+    printf("\nEnter your choice\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
+    top=push(stack,top,4);
+    break;
+    case 2:
+    top=pop(stack,top);
+    break;
+    case 3:
+    peek(stack,top);
+    break;
+    case 4:
+    isempty(top);
+    break;
+    case 5:
+    isfull(top,4);
+    break;
+    case 6:
+    exit(1);
+    default:
+    printf("Enter the valid number\n");
+    }
+    }
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    1
+    Enter the item you want to insert
+    1
+    1 is added in the stack
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    1
+    Enter the item you want to insert
+    2
+    2 is added in the stack
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    1
+    Enter the item you want to insert
+    3
+    3 is added in the stack
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    1
+    Enter the item you want to insert
+    4
+    4 is added in the stack
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    1
+    Enter the item you want to insert
+    5
+    5 is added in the stack
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    3
+    Top element in the stack is 5
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    5
+    Stack is full
+    
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    3
+    Top element in the stack is 5
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    2
+    Deleted Item is 5
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    2
+    Deleted Item is 4
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    2
+    Deleted Item is 3
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    2
+    Deleted Item is 2
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    2
+    Deleted Item is 1
+    1. Push
+    2. Pop
+    3. Peek
+    4. Isempty
+    5. Isfull
+    6. Exit
+    
+    Enter your choice
+    6
+    
+</pre>
+    </div>
+</body>
+</html>

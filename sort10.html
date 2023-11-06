@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+void quick(int *, int, int);
+int partition(int *, int, int);
+
+void quick(int a[], int low, int high) {
+    int pivot;
+    if (low < high) {
+        pivot = partition(a, low, high);
+        quick(a, low, pivot - 1);
+        quick(a, pivot + 1, high);
+    }
+}
+
+int partition(int a[], int low, int high) {
+    int pivot, i, j, temp;
+    pivot = a[high];
+    i = low - 1;
+    for (j = low; j < high; j++) {
+        if (a[j] <= pivot) {
+            i++;
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
+    }
+    temp = a[i + 1];
+    a[i + 1] = a[high];
+    a[high] = temp;
+    return (i + 1);
+}
+
+int main() {
+    int i, a[10];
+    printf("Enter the arrays\n");
+    for (i = 0; i < 10; i++) {
+    	printf("Enter the array at location %d\t",i+1);
+        scanf("%d", &a[i]);
+    }
+    quick(a, 0,9);
+    printf("Sorted array:");
+    for (i = 0; i < 10; i++) {
+        printf("%d\n", a[i]);
+    }
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   9
+    Enter the array at location 2   3
+    Enter the array at location 3   5
+    Enter the array at location 4   1
+    Enter the array at location 5   8
+    Enter the array at location 6   6
+    Enter the array at location 7   7
+    Enter the array at location 8   2
+    Enter the array at location 9   4
+    Enter the array at location 10  75
+    Sorted array:1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    75
+    
+</pre>
+    </div>
+</body>
+</html>

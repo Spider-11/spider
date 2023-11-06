@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+void bubble(char str[][10],int size)
+{
+int i,j;
+char temp[10];
+for(i=0;i&lt;size-1;i++)
+{
+for(j=0;j&lt;size-i-1;j++)
+{
+if(strcmp(str[j],str[j+1])>0)
+{
+strcpy(temp,str[j]);
+strcpy(str[j],str[j+1]);
+strcpy(str[j+1],temp);
+}
+}
+}
+}
+int main()
+{
+char str[5][10];
+int i;
+printf("Enter the strings\n");
+for(i=0;i&lt;5;i++)
+{
+printf("Enter the string at location %d\t",i+1);
+scanf("%s",str[i]);
+}
+bubble(str,5);
+printf("Sorted Strings are\n");
+for(i=0;i&lt;5;i++)
+{
+printf("%s\n",str[i]);
+}
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the strings
+    Enter the string at location 1  hye
+    Enter the string at location 2  hello
+    Enter the string at location 3  bye
+    Enter the string at location 4  book
+    Enter the string at location 5  cat
+    Sorted Strings are
+    book
+    bye
+    cat
+    hello
+    hye
+    
+</pre>
+    </div>
+</body>
+</html>

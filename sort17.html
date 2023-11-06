@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+
+void merge(char str[][10], int l, int m, int r);
+void mergeSort(char str[][10], int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(str, l, m);
+        mergeSort(str, m + 1, r);
+        merge(str, l, m, r);
+    }
+}
+
+void merge(char str[][10], int l, int m, int r) {
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+    char L[n1][10], R[n2][10];
+
+    for (i = 0; i < n1; i++) {
+        strcpy(L[i], str[l + i]);
+    }
+
+    for (j = 0; j < n2; j++) {
+        strcpy(R[j], str[m + 1 + j]);
+    }
+
+    i = 0;
+    j = 0;
+    k = l;
+
+    while (i < n1 && j < n2) {
+        if (strcmp(L[i], R[j]) <= 0) {
+            strcpy(str[k], L[i]);
+            i++;
+        } else {
+            strcpy(str[k], R[j]);
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        strcpy(str[k], L[i]);
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        strcpy(str[k], R[j]);
+        j++;
+        k++;
+    }
+}
+
+int main() {
+    int i;
+    char str[5][10];
+
+    printf("Enter the strings\n");
+    for (i = 0; i < 5; i++) {
+        printf("Enter the string at location %d: ", i + 1);
+        scanf("%s", str[i]);
+    }
+
+    mergeSort(str, 0, 4);
+
+    printf("\nSorted strings are\n");
+    for (i = 0; i < 5; i++) {
+        printf("%s\n", str[i]);
+    }
+
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the strings
+    Enter the string at location 1: book
+    Enter the string at location 2: cat
+    Enter the string at location 3: hello
+    Enter the string at location 4: welcome
+    Enter the string at location 5: hye
+    
+    Sorted strings are
+    book
+    cat
+    hello
+    hye
+    welcome
+    
+</pre>
+    </div>
+</body>
+</html>

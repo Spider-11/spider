@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="div4">
+    <p>
+<pre>
+        #include&lt;stdio.h&gt;
+        void main()
+        {
+        int ar[10],i,j;
+        printf("Enter the arrays\n");
+        for(i=0;i&lt;10;i++)
+        {
+        printf("\nEnter the array at location %d \t",i+1);
+        scanf("%d",&ar[i]);
+        }
+        for(i=0;i&lt;10;i++)
+        {
+        for(j=i+1;j&lt;10;j++)
+        {
+        if(ar[i]==ar[j])
+        {
+        ar[j]=0;
+        }
+        }
+        }
+        printf("\nAfter removing the duplicate arrays");
+        for(i=0;i&lt;10;i++)
+        {
+        printf("\n%d",ar[i]);
+        }
+        }
+</pre>
+    </p>
+</div>
+<div id="div5">
+    <p>
+<pre>
+    Enter the arrays
+
+    Enter the array at location 1   1
+    
+    Enter the array at location 2   3
+    
+    Enter the array at location 3   5
+    
+    Enter the array at location 4   2
+    
+    Enter the array at location 5   6
+    
+    Enter the array at location 6   4
+    
+    Enter the array at location 7   8
+    
+    Enter the array at location 8   6
+    
+    Enter the array at location 9   3
+    
+    Enter the array at location 10  7
+    
+    After removing the duplicate arrays
+    1
+    3
+    5
+    2
+    6
+    4
+    8
+    0
+    0
+    7
+</pre>
+    </p>
+</div>
+</body>
+</html>

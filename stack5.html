@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include &lt;stdio.h&gt;
+int push(char ch, char stack[], int *top, int size) {
+    if (*top == size - 1) {
+        printf("Stack is full\n");
+    } else {
+        (*top)++;
+        stack[*top] = ch;
+    }
+    return *top;
+}
+
+char pop(char stack[], int *top) {
+    char ch;
+    if (*top == -1) {
+        printf("Stack is empty\n");
+        return '\0';
+    } else {
+        ch = stack[*top];
+        (*top)--;
+        return ch;
+    }
+}
+
+int main() {
+    char stack[10], ch;
+    int top = -1, i;
+    printf("Enter the string (up to 10 characters): ");
+    scanf("%s", stack); 
+
+    i = 0;
+    while (stack[i] != '\0') {
+        top = push(stack[i], stack, &top, 10);
+        i++;
+    }
+    printf("\nReverse String is\n");
+    while (top != -1) {
+        ch = pop(stack, &top);
+        if (ch != '\0') {
+            printf("%c", ch);
+        }
+    }
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string (up to 10 characters): welcome
+
+    Reverse String is
+    emoclew
+</pre>
+    </div>
+</body>
+</html>

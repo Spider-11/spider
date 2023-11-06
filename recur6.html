@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+int findmin(int arr[], int size) {
+	int sum;
+    if (size == 1) {
+        return arr[0];
+    } else {
+        sum = findmin(arr, size - 1);
+        return (sum < arr[size - 1]) ? sum : arr[size - 1];
+    }
+}
+
+int main() {
+    int arr[5],i,ele;
+    printf("Enter the arrays:\n");
+    for (i = 0; i < 5; ++i) {
+    	printf("Enter the array at location %d\t",i+1);
+        scanf("%d", &arr[i]);
+    }
+    ele = findmin(arr,5);
+    printf("The smallest element in the array is: %d\n", ele);
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays:
+    Enter the array at location 1   7
+    Enter the array at location 2   2
+    Enter the array at location 3   4
+    Enter the array at location 4   7
+    Enter the array at location 5   1
+    The smallest element in the array is: 1
+    
+</pre>
+    </div>
+
+</body>
+</html>

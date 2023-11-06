@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+    <p>
+<pre>
+    #include&lt;stdio.h&gt;
+    void main()
+    {
+    int ar[10],ar2[10],i;
+    printf("Enter the first array\n");
+    for(i=0;i&lt;10;i++)
+    {
+    printf("Enter the array in the location of %d\t",i+1);
+    scanf("%d",&ar[i]);
+    }
+    printf("Enter the second array\n");
+    for(i=0;i&lt;10;i++)
+    {
+    printf("Enter the array in the location of %d\t",i+1);
+    scanf("%d",&ar2[i]);
+    }
+    for(i=0;i&lt;10;i++)
+    {
+    if(ar[i]==ar2[i])
+    printf("\nBoth arrays are same");
+    else
+    printf("\nArrays are not same");
+    }
+    }
+</pre>
+    </p>
+    </div>
+    <div id="div5">
+        <p>
+<pre>
+    Enter the first array
+    Enter the array in the location of 1    2
+    Enter the array in the location of 2    4
+    Enter the array in the location of 3    6
+    Enter the array in the location of 4    2
+    Enter the array in the location of 5    6
+    Enter the array in the location of 6    8
+    Enter the array in the location of 7    4
+    Enter the array in the location of 8    7
+    Enter the array in the location of 9    4
+    Enter the array in the location of 10   1
+    Enter the second array
+    Enter the array in the location of 1    2
+    Enter the array in the location of 2    3
+    Enter the array in the location of 3    5
+    Enter the array in the location of 4    2
+    Enter the array in the location of 5    7
+    Enter the array in the location of 6    8
+    Enter the array in the location of 7    4
+    Enter the array in the location of 8    7
+    Enter the array in the location of 9    3
+    Enter the array in the location of 10   1
+
+    Both arrays are same
+    Arrays are not same
+    Arrays are not same
+    Both arrays are same
+    Arrays are not same
+    Both arrays are same
+    Both arrays are same
+    Both arrays are same
+    Arrays are not same
+    Both arrays are same
+</pre>
+        </p>
+    </div>
+</body>
+</html>

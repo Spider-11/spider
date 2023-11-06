@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+void merge(int arr[], int l, int m, int r);
+void mergeSort(int arr[], int l, int r)
+{
+if (l < r)
+{
+int m = l+(r-l)/2;
+mergeSort(arr, l, m);
+mergeSort(arr, m+1, r);
+merge(arr, l, m, r);
+}
+}
+void merge(int arr[], int l, int m, int r)
+{
+int i, j, k,L[10],R[10];
+int n1 = m - l + 1;
+int n2 = r - m;
+for (i = 0; i < n1; i++)
+L[i] = arr[l + i];
+for (j = 0; j < n2; j++)
+R[j] = arr[m + 1+ j];
+i = 0;
+j = 0;
+k = l;
+while (i < n1 && j < n2)
+{
+if (L[i] <= R[j])
+{
+arr[k] = L[i];
+i++;
+}
+else
+{
+arr[k] = R[j];
+j++;
+}
+k++;
+}
+while (i < n1)
+{
+arr[k] = L[i];
+i++;
+k++;
+}
+while (j < n2)
+{
+arr[k] = R[j];
+j++;
+k++;
+}
+}
+int main()
+{
+int arr[10],i;
+printf("Enter the arrays\n");
+for(i=0;i&lt;10;i++)
+{
+printf("Enter the array at location %d\t",i+1);
+scanf("%d",&arr[i]);
+}
+mergeSort(arr, 0, 9);
+printf("\nSorted array is \n");
+for(i=0;i&lt;10;i++)
+{
+printf("%d\n",arr[i]);
+}
+}
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the arrays
+    Enter the array at location 1   2
+    Enter the array at location 2   5
+    Enter the array at location 3   4
+    Enter the array at location 4   1
+    Enter the array at location 5   9
+    Enter the array at location 6   8
+    Enter the array at location 7   7
+    Enter the array at location 8   0
+    Enter the array at location 9   6
+    Enter the array at location 10  5
+    
+    Sorted array is
+    0
+    1
+    2
+    4
+    5
+    5
+    6
+    7
+    8
+    9
+    
+</pre>
+    </div>
+</body>
+</html>

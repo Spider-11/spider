@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+int main()
+{
+	char str[10],ch;
+	int i,pos,count=0;
+	printf("Enter the string\n");
+	gets(str);
+	printf("Enter the position\t");
+	scanf("%d",&pos);
+	while(str[count]!=NULL)
+	{
+		count++;
+	}
+		if(pos>=0 && pos&lt;count){
+			ch=str[pos];
+			printf("Character at %d position is %c\n",pos,ch);
+		}
+		else
+		{
+			printf("Invalid position\n");
+		}
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter a string:
+    welcome
+
+    Character at 4 position is o
+</pre>
+    </div>
+    
+</body>
+</html>

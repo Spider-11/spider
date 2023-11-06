@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+        <p>
+<pre>
+    #include&lt;stdio.h&gt;
+    void sorting(int[],int);
+    int main()
+    {
+    int ar[5],ar2[5],ar3[10],ar5[10],i,j;
+    printf("Enter the first array\n");
+    for(i=0;i&lt;5;i++)
+    {
+    printf("Enter the array at location %d\t",i+1);
+    scanf("%d",&ar[i]);
+    }
+    printf("\nEnter the Second array\n");
+    for(j=0;j&lt;5;j++)
+    {
+    printf("Enter the arrat at location %d\t",i+1);
+    scanf("%d",&ar2[j]);
+    }
+    for(i=0;i&lt;5;i++)
+    {
+    ar3[i]=ar[i];
+    }
+    for(j=0;j&lt;5;j++)
+    {
+    ar3[i+j]=ar2[j];
+    }
+    sorting(ar3,10);
+    for(i=0;i&lt;10;i++)
+    {
+    printf("\nMerge of two arrays are %d\t",ar3[i]);
+    }
+    }
+    void sorting(int ar4[],int size)
+    {
+    int i,j,temp;
+    for(i=0;i&lt;size;i++)
+    {
+    for(j=i+0;j&lt;size;j++)
+    {
+    if(ar4[i]>ar4[j])
+    {
+    temp=ar4[i];
+    ar4[i]=ar4[j];
+    ar4[j]=temp;
+    }
+    }
+    }
+    }
+</pre>
+        </p>
+    </div>
+    <div id="div5">
+        <p>
+<pre>
+    Enter the first array
+    Enter the array at location 1   2
+    Enter the array at location 2   3
+    Enter the array at location 3   4
+    Enter the array at location 4   1
+    Enter the array at location 5   5
+
+    Enter the Second array
+    Enter the arrat at location 1   9
+    Enter the arrat at location 2   6
+    Enter the arrat at location 3   8
+    Enter the arrat at location 4   7
+    Enter the arrat at location 5   0
+
+    Merge of two arrays are 0
+    Merge of two arrays are 1
+    Merge of two arrays are 2
+    Merge of two arrays are 3
+    Merge of two arrays are 4
+    Merge of two arrays are 5
+    Merge of two arrays are 6
+    Merge of two arrays are 7
+    Merge of two arrays are 8
+    Merge of two arrays are 9
+</pre>
+        </p>
+    </div>
+</body>
+</html>

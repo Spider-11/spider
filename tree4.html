@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+struct Node {
+	int data;
+	struct Node *left;
+	struct Node *right;
+};
+
+struct Node* newNode(int item)
+{
+	struct Node* temp
+		= (struct Node*)malloc(sizeof(struct Node));
+	temp->data = item;
+	temp->left = temp->right = NULL;
+	return temp;
+}
+
+void rightView2(struct Node* root, int level, int* max_level)
+{
+
+	if (root == NULL)
+		return;
+
+	if (*max_level < level) {
+		printf("Right view of binart is %d\n", root->data);
+		*max_level = level;
+	}
+
+	rightView2(root->right, level + 1, max_level);
+	rightView2(root->left, level + 1, max_level);
+}
+
+void rightView(struct Node* root)
+{
+	int max_level = 0;
+	rightView2(root, 1, &max_level);
+}
+
+int main()
+{
+	struct Node* root = newNode(1);
+	root->left = newNode(2);
+	root->right = newNode(3);
+	root->left->left = newNode(4);
+	root->left->right = newNode(5);
+	root->right->left = newNode(6);
+	root->right->right = newNode(7);
+	root->right->left->right = newNode(8);
+	root->left->left->right = newNode(9);
+	rightView(root);
+}
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Right view of binart is 1
+    Right view of binart is 3
+    Right view of binart is 7
+    Right view of binart is 8
+</pre>
+    </div>
+</body>
+</html>

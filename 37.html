@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+    #include&lt;stdio.h&gt;
+    void main()
+    {
+    char str[30],i;
+    int count=0;
+    printf("Enter the string\n");
+    gets(str);
+    for(i=0;str[i];i++)
+    {
+    if(str[i]=='a'|| str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u')
+    count++;
+    }
+    printf("Entered String is %s\n",str);
+    printf("Total vowels in strings are %d",count);
+    }
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the string
+    welcome to chandigarh
+    Entered String is welcome to chandigarh
+
+    Total vowels in strings are 7
+</pre>
+    </div>
+</body>
+</html>

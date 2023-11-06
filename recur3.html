@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include&lt;stdio.h&gt;
+
+int sum(int n) {
+    if (n == 1) {
+        return 1;
+    } else {
+        return n + sum(n - 1);
+    }
+}
+
+int main() {
+    int result,num;
+    printf("Enter the natural number\t");
+    scanf("%d",&num);
+    result=sum(num);
+    printf("Sum of natural numbers %d\n", result);
+}
+
+
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+    Enter the natural number        6
+    Sum of natural numbers 21
+    
+</pre>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+#iframe1{
+    font-display: flex;
+    background-color: lightblue;
+    color: blueviolet;
+    width: 100%;
+    height: 128px;
+    font-size: 4px;
+    border: none;
+    scroll-behavior: unset;
+    scroll-margin: none;
+    overflow: hidden;
+}
+:root { 
+    --main-bg-color: #22e722;
+    --font1: "Baloo Bhaina 2", cursive;
+    --font2: "Roboto", sans-serif;
+  }
+.max-width-1 {
+  max-width: 100vw;
+  max-height: 100vh;
+  
+}
+
+.max-width-2 {
+  max-width: 100vw;
+  max-height: 100vh;
+  
+ 
+}
+
+.m-auto {
+  margin-left: 0%;
+}
+
+
+
+.navigation {
+    margin-top: 15px;
+    font-family: var(--font1);
+    /* height: 74px;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    display: flex;
+    margin-left: none;
+  }
+  
+  .nav-left span {
+    font-size: 25px;
+  /*  padding-top: 10px;*/
+  }
+  
+  .nav-left ul {
+    display: flex;
+    align-items: center;
+    margin: 0 77px;
+    font-size: 23px;
+    padding-bottom: 23px;
+    overflow: hidden;
+  }
+  
+  .nav-left ul li {
+    list-style: none;
+    margin: 0 14px;
+    font-family: var(--font2);
+    transition: all 0.3s ease-in-out;
+    font-size: larger;
+  }
+  
+  .nav-left ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Baloo Bhaina';
+    overflow: hidden;
+  }
+  
+  .nav-left ul li a:hover {
+    color: var(--main-bg-color);
+    font-weight: bolder;
+    overflow: hidden;
+    scroll-margin-bottom: none;
+  }

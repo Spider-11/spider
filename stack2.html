@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="div.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div4">
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int push(char ch,char stack[],int size,int top) {
+    if (top == size) {
+	printf("Stack Overflow\n");
+    } else {
+	top++;
+	stack[top]=ch;
+	printf("Pushed \"%c\" onto the stack.\n", ch);
+    }
+    return top;
+}
+
+int pop(int top,char stack[]) {
+    if (top == -1) {
+	printf("Stack Underflow\n");
+    } else {
+	printf("Popped \"%c\" from the stack.\n", stack[top]);
+	top--;
+    }
+    return top;
+}
+
+void peek(int top,char stack[]) {
+    if (top == -1) {
+	printf("Stack is empty. No element to peek.\n");
+    } else {
+	printf("Top element:\"%c\"\n", stack[top]);
+    }
+}
+
+void isempty(int top) {
+     if(top==-1)
+     {
+     printf("Stack is empty\n");
+     }
+     else
+     {
+     printf("Stack is not empty\n");
+     }
+}
+
+void isfull(int top,int size) {
+    if(top==size)
+    {
+    printf("Stack is full\n");
+    }
+    else
+    {
+    printf("Stack is not full\n");
+    }
+}
+void main() {
+    int choice,top=-1;
+    char ch, stack[10];
+
+    while(1)
+    {
+	printf("\nStack Operations:\n");
+	printf("1. Push\n");
+	printf("2. Pop\n");
+	printf("3. Peek\n");
+	printf("4. Check if Empty\n");
+	printf("5. Check if Full\n");
+	printf("6. Exit\n");
+	printf("Enter your choice: ");
+	scanf("%d", &choice);
+
+	switch (choice) {
+	    case 1:
+		fflush(stdin);
+		printf("Enter the character to push onto the stack: ");
+		scanf("%c", &ch);
+		top=push(ch,stack,9,top);
+		break;
+	    case 2:
+		top=pop(top,stack);
+		break;
+	    case 3:
+		peek(top,stack);
+		break;
+	    case 4:
+		isempty(top);
+		break;
+	    case 5:
+		 isfull(top,9);
+		break;
+	    case 6:
+	    exit(1);
+		break;
+	    default:
+		printf("Invalid choice. Please enter a valid option.\n");
+	}
+    }
+
+}
+</pre>
+    </div>
+    <div id="div5">
+<pre>
+
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 1
+	Enter the character to push onto the stack: h
+	Pushed "h" onto the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 1
+	Enter the character to push onto the stack: o
+	Pushed "o" onto the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 1
+	Enter the character to push onto the stack: m
+	Pushed "m" onto the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 1
+	Enter the character to push onto the stack: e
+	Pushed "e" onto the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 4
+	Stack is not empty
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 3
+	Top element:"e"
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 2
+	Popped "e" from the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 2
+	Popped "m" from the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 2
+	Popped "o" from the stack.
+	
+	Stack Operations:
+	1. Push
+	2. Pop
+	3. Peek
+	4. Check if Empty
+	5. Check if Full
+	6. Exit
+	Enter your choice: 6
+	
+</pre>
+    </div>
+</body>
+</html>
